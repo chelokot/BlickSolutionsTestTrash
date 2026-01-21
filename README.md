@@ -2,6 +2,9 @@
 
 A full stack shopping list app built with React + TypeScript, Express + TypeScript, and MongoDB.
 
+<img width="2827" height="1374" alt="Screenshot From 2026-01-21 02-06-03" src="https://github.com/user-attachments/assets/1a638ec1-68c6-4375-b287-9dbb90f9f875" />
+
+
 ## Requirements
 
 - Node.js 20.19+ (or 22.12+)
