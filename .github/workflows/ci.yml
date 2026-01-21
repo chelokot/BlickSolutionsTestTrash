@@ -48,7 +48,7 @@ jobs:
       - name: Start stack
         run: docker compose up -d --build
       - name: Run e2e
-        run: node e2e/run-e2e.mjs
+        run: node tests/e2e/run-e2e.mjs
       - name: Shutdown stack
         if: always()
         run: docker compose down -v
