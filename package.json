@@ -1,0 +1,16 @@
+{
+  "name": "shopping-list",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome format . --write",
+    "test": "npm test --prefix backend && npm test --prefix frontend",
+    "typecheck": "npm run typecheck --prefix backend && npm run typecheck --prefix frontend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "e2e": "node e2e/run-e2e.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11"
+  }
+}

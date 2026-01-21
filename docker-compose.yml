@@ -1,0 +1,30 @@
+services:
+  mongo:
+    image: docker.io/library/mongo:7.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/shopping-list
+      PORT: "3001"
+      CLIENT_ORIGIN: http://localhost:8080
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
